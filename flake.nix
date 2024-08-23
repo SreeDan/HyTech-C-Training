@@ -48,32 +48,4 @@
             '';
         }; 
     };
-    # let
-    #   derivations = import ./default.nix;
-    # in 
-    #   overlays = [
-    #     (final: prev: {
-    #       hello_package = derivations.myDerivation1;
-    #     })
-    #   ];
-
-  #   let
-  #     hello_lib_overlay = final: prev: {
-  #       hello_lib = final.callPackage ./default.nix { };
-  #     };
-  #   # The set of systems to provide outputs for
-  #   allSystems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
-
-  #   # A function that provides a system-specific Nixpkgs for the desired systems
-  #   forAllSystems = f: nixpkgs.lib.genAkttrs allSystems (system: f {
-  #     pkgs = import nixpkgs { inherit system; };
-  #   });
-  # in {
-  #   packages = forAllSystems ({ pkgs }: {
-  #     default = {
-  #       # Package definition
-  #       hello_nix_package
-  #     };
-  #   });
-  # };
 }
